@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>Crear Vehiculo</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h1>Creando Vehiculo</h1>
+
+        </div>
+
+        <div class="row">
+            <form method="POST" id="formulario" action="#">
+                <div class="row">
+                    <div class="form-group">
+                        {{vehiculo_form.patente.label}}
+                        {{vehiculo_form.patente}}
+                    </div>
+
+                </div>
+            </form>
+
+        </div>
+
+        <div class="row">
+            <form method="POST" id="formulario" action="#">
+                <div class="row">
+                    <div class="form-group">
+                        {{vehiculo_form.marca.label}}
+                        {{vehiculo_form.marca}}
+                    </div>
+
+                </div>
+            </form>
+
+        </div>
+
+        <div class="row">
+            <form method="POST" id="formulario" action="#">
+                <div class="row">
+                    <div class="form-group">
+                        {{vehiculo_form.modelo.label}}
+                        {{vehiculo_form.modelo}}
+                    </div>
+
+                </div>
+            </form>
+
+        </div>
+
+        <div class="row">
+            <form method="POST" id="formulario" action="#">
+                <div class="row">
+                    <div class="form-group">
+                        {{vehiculo_form.user.label}}
+                        {{vehiculo_form.user}}
+                    </div>
+
+                </div>
+            </form>
+
+        </div>
+
+        <div class="row">
+            <input type="submit" class="btn btn-danger" id="enviar" value="Enviar">
+            <input type="reset" class="btn btn-primary" id="limpiar" value="Limpiar">
+        </div>
+
+        
+    </div>
+
+
+</body>
+</html>

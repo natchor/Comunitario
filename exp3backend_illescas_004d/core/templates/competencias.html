@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {%load static%}
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="{%static 'css/estilos.css'%}" type="text/css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+  <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+  <link rel="stylesheet" type="text/css" href="static/css/index.css" th:href="@{/css/index.css}">
+  <script src="{%static 'js/validacion.js'%}"></script>
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  
+    <title>Competencias</title>
+
+</head>
+
+
+<body>
+
+    <!--Barra de navegación-->
+    <nav class="navbar sticky-top navbar-expand-sm navbar-light bg-light baralign">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#opciones">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <a class="navbar-brand" href="inicio.html">
+          <img src="{%static 'img/foto_10'%}" width="70" height="60">
+        </a>
+
+        <div class="collapse navbar-collapse"  id="opciones"> 
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="inicio.html"><img src="{%static 'img/foto_15.jpg'%}" width="33" height="33" alt="">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="quienes-somos.html"><img src="{%static 'foto_21.jpg'%}" width="33" height="33" alt="">Quienes Somos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="galeria-fotografica.html"><img src="{%static 'foto_22.jpg'%}" width="33" height="33" alt="">Galeria Fotográfica</a>
+            </li>         
+          </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+              <a  class="nav-link" href="mostrar.html"></a>
+          </li>  
+          <li class="nav-item">
+            <a class="nav-link" href="competencias.html">Competencias</a>
+          </li>    
+          <li class="nav-item">
+            <a class="nav-link" href="registro.html">Registrarse</a>
+          </li>  
+      </ul>
+        </div>
+        
+      </nav>
+
+      <!--Elegir que hacer-->
+      <div class="container-fluid d-flex flex-column justify-content-center align-items-center text-center">
+        <form class="col-12" method="get" name="datos" onsubmit="return validacion()">
+          <br><h1 style="font-family: Gaming; font-size: 2em;"> Crear Competencias </h1><br>
+          <div class="form-group" id="user-group">
+            <label> Nombre del Cordinador </label> 
+                <input type="text" class="form-control" name="nombre" id="usuario">
+            </div>
+            <div class="form-group" id="user-group">
+              <label> Nombre Competencia </label> 
+                <input type="text" class="form-control" name="nombre" id="usuario">
+            </div>
+            <div class="form-group" id="user-group">
+              <label> Cantidad Vehiculos </label> 
+                <input type="number" class="form-control" name="Vehiculo" id="numero">
+            </div>
+            <div class="form-group" id="user-group">
+              <label> Fecha inicio  </label>
+                <input type="date" class="form-control" name="fecha" min="1900-01-01" id="fechanac">
+              <label> Hora incio </label>
+                <input type="time" class="form-control" name="hora" min="00:00" id="horainic">
+            </div> <br>            
+          </div>
+            <button  type="submit" class="btn btn-primary"><i class="fas fa-sign-in-alt" id="Generar"></i> Fechas </button>
+
+           
+
+        </form> <br> <br>
+
+
+        
+      </div>
+
+
+</body>
+</html>

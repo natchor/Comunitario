@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informacion Database</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    {% load static %}
+
+</head>
+<body style="background-color: cadetblue;">
+    <div  class="container">
+        <div class="row">
+             <h1 style="text-align: center;">Listado de vehiculos</h1>
+        </div>
+        <div class="row">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td>Patente</td>
+                        <td>Marca</td>
+                        <td>Modelo</td>
+                        <td>Opciones</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in Datos%}
+                        <tr>
+                            <td>{{i.patente}}</td>
+                            <td>{{i.marca}}</td>
+                            <td>{{i.modelo}}</td>
+                            <td><a href="{% url 'form_mod_vehiculo' i.patente%}" class="btn btn-primary" ></a> Modificar </td>
+                            <td><a href="{% url 'form_mod_vehiculo' i.patente%}" class="btn btn-danger" ></a> Eliminar </td>
+                        </tr>
+                    {%endfor%}    
+                </tbody>
+
+            </table>
+
+        <br/>
+
+        </div>
+
+        <div class="row">
+            <h1 style="text-align: center;">Listado de Usuarios</h1>
+        </div>
+        <div class="row">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td>idUser</td>
+                        <td>nombreUser</td>
+                        <td>correo</td>
+                        <td>password</td>
+                        <td>Fecha Nacimiento</td>
+                        <td>Opciones</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in User%}
+                        <tr>
+                            <td>{{i.idUser}}</td>
+                            <td>{{i.nombreUser}}</td>
+                            <td>{{i.correo}}</td>
+                            <td>{{i.password}}</td>
+                            <td>{{i.nac}}</td>
+                            <td><a href="{% url 'form_mod_user' i.idUser%}" class="btn btn-primary" ></a> Modificar </td>
+                            <td><a href="{% url 'form_mod_user' i.idUser%}" class="btn btn-danger" ></a> Eliminar </td>
+                        </tr>
+                    {%endfor%}    
+                </tbody>
+
+            </table>
+        </div>
+
+
+    </div>
+
+</body>
+</html>
